@@ -58,8 +58,8 @@ public class Main {
         do {
             System.out.println("Izberete opciq: ");
             System.out.println("1:Dobavi product\n2:Dobavi kolichestvo\n3:Promeni cena\n" +
-                    "4:Vij produkti\n5:Iztrii product\n6:Dobavi predstavitel\n7:Iztrii predstavitel\n8:promeni zaplata" +
-                    "\n9:otchet na smetki\n10: otchet za predstavitel\n11: za daden period\n12: dobavi administrator\n0: logout");
+                    "4:Vij produkti\n5:Iztrii product\n6:Vij predstaviteli\n7:Dobavi predstavitel\n8:Iztrii predstavitel\n9:promeni zaplata" +
+                    "\n10:otchet na smetki\n11:otchet za predstavitel\n12:za daden period\n13:dobavi administrator\n0: logout");
                 choice = scan.nextLine();
 
 
@@ -128,7 +128,7 @@ public class Main {
     static void predstavitel(Predstavitel p){
         do{
             System.out.println("Izberete opciq:\n1 Dobavi klient\n2 registrirai prodajba\n3" +
-                    " iztrii klient\n4 promeni email na klient\n0 logout");
+                    " iztrii klient\n4 promeni email na klient\n5 Vij klienti\n6 vij produkti\n0 logout");
             choice = scan.nextLine();
             switch (choice) {
                 case "1" -> clients.add(p.addClients(clients));
