@@ -86,38 +86,38 @@ public class Main {
                     } catch (NoSuchIDException e) {
                         System.out.println("A problem occurred:" + e);
                     }
-                }
-                case "6" -> predstaviteli.add(a.addPredstavitel(predstaviteli,otchet));
-                case "7" -> {
+                }case "6" -> a.viewAllPred(predstaviteli);
+                case "7" -> predstaviteli.add(a.addPredstavitel(predstaviteli,otchet));
+                case "8" -> {
                     try {
                         a.deletePredstavitel(predstaviteli,otchet);
                     } catch (NoSuchIDException e) {
                         System.out.println("A problem occurred:" + e);
                     }
                 }
-                case "8" -> {
+                case "9" -> {
                     try {
                         a.changeZaplata(predstaviteli,otchet);
                     } catch (NoSuchIDException e) {
                         System.out.println("A problem occurred:" + e);
                     }
                 }
-                case "9" -> a.getOtchetZaVsichki(otchet);
-                case "10" -> {
+                case "10" -> a.getOtchetZaVsichki(otchet);
+                case "11" -> {
                     try {
                         a.getOtchetZa1(predstaviteli, catalogs);
                     } catch (NoSuchIDException e) {
                         System.out.println("A problem occurred:" + e);
                     }
                 }
-                case "11" -> {
+                case "12" -> {
                     try {
                         a.viewall(catalogs);
                     } catch (NoSuchIDException e) {
                         System.out.println("A problem occurred:" + e);
                     }
                 }
-                case "12" -> admins.add(a.addAdmin(admins));
+                case "13" -> admins.add(a.addAdmin(admins));
                 case "0" -> i = 4;
                 default -> System.out.println("wrong choice");
             }
@@ -127,7 +127,7 @@ public class Main {
 
     static void predstavitel(Predstavitel p){
         do{
-            System.out.println("Izberete opciq:\n1 Dobavi klient\n2 prodai produkt\n3" +
+            System.out.println("Izberete opciq:\n1 Dobavi klient\n2 registrirai prodajba\n3" +
                     " iztrii klient\n4 promeni email na klient\n0 logout");
             choice = scan.nextLine();
             switch (choice) {
@@ -154,6 +154,7 @@ public class Main {
                     }
                 }
                 case "5" -> p.viewClients(clients);
+                case "6" -> p.viewProducts(products);
                 case "0" -> i = 4;
                 default -> System.out.println("wrong choice");
             }

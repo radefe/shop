@@ -94,6 +94,11 @@ private final String password;
             throw new NoSuchIDException("No such product!");
         return null;
     }
+    public void viewProducts(List<Products> arr) {
+        for (Products p : arr) {
+            System.out.println(p.toString());
+        }
+    }
     public void deleteClient(List<Clients> arr) throws NoSuchIDException {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter client's name");

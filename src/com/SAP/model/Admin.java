@@ -8,7 +8,7 @@ public class Admin implements Serializable {
 
     private final String id;
     private final String password;
-    private String email;
+    private final String email;
 
 
     public String getId() {
@@ -185,6 +185,11 @@ public Predstavitel addPredstavitel(List<Predstavitel> arr,Otchet otchet){
         }
         if(!exists)
             throw new NoSuchIDException("No such predstavitel!");
+    }
+    public void viewAllPred(List<Predstavitel> arr){
+        for(Predstavitel p : arr){
+            System.out.println(p);
+        }
     }
     public void getOtchetZaVsichki(Otchet otchet){
         System.out.println("Total: " + (otchet.getTotalPrihodi() - (otchet.getTotalMoneySpent() + otchet.getTotalPayment())));
